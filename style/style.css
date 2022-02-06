@@ -555,6 +555,7 @@
 
 .section__material {
     padding-bottom: 36px;
+    overflow: hidden;
 }
 
 .material__wrapper {
