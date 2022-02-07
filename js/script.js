@@ -81,4 +81,43 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 
+    let popup = document.querySelectorAll('.js-popup')
+
+    if (popup) {
+        requestPopup();
+    }
+
+    function requestPopup() {
+        popup.forEach(btn => btn.addEventListener('click', openForm))
+
+        function openForm(e) {
+            let popupform = document.querySelector('.popup__form')
+                // let popupcontainer = document.querySelector('.popup__container')
+            popupform.classList.remove('hidden')
+            setTimeout(() => { popupform.classList.add('active') }, 1);
+            popupform.addEventListener('click', (e) => {
+                if (e.target === document.querySelector('.popup__close-form')) {
+                    popupform.classList.remove('active')
+                    setTimeout(() => { popupform.classList.add('hidden') }, 700)
+                }
+            })
+        }
+    }
+
+
+    $.fn.setCursorPosition = function(pos) {
+        if ($(this).get(0).setSelectionRange) {
+            $(this).get(0).setSelectionRange(pos, pos);
+        } else if ($(this).get(0).createTextRange) {
+            var range = $(this).get(0).createTextRange();
+            range.collapse(true);
+            range.moveEnd('character', pos);
+            range.moveStart('character', pos);
+            range.select();
+        }
+    };
+
+    $('input[type="tel"]').click(function() {
+        $(this).setCursorPosition(3);
+    }).mask("+7 (999) 999 99 99");
 })
