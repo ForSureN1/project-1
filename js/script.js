@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const project = e.target.closest('.project__item')
             let projectImg = project.querySelector('.project__item-img img').src
             let projectTitle = project.querySelector('.project__item-title').textContent
-            let projectText = project.querySelector('.project__item-txt').textContent
+                // let projectText = project.querySelector('.project__item-txt').textContent
             let projectAttrTotalArea = project.getAttribute('data-totalarea')
                 // let projectAttrSquare = project.getAttribute('data-square')
                 // let projectAttrHeight = project.getAttribute('data-height')
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // console.log(projectSizes)
             popupProject.querySelector('.popup__img img').src = projectImg
             popupProject.querySelector('.popup__title').textContent = projectTitle
-            popupProject.querySelector('.popup__txt').textContent = projectText
+                // popupProject.querySelector('.popup__txt').textContent = projectText
             popupProject.querySelector('.value-1').textContent = projectAttrTotalArea
                 // popupProject.querySelector('.value-2').textContent = projectAttrSquare
                 // popupProject.querySelector('.value-3').textContent = projectAttrHeight
