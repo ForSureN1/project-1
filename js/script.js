@@ -50,10 +50,13 @@ document.addEventListener('DOMContentLoaded', () => {
             let projectTitle = project.querySelector('.project__item-title').textContent
             let projectText = project.querySelector('.project__item-txt').textContent
             let projectAttrTotalArea = project.getAttribute('data-totalarea')
-            let projectAttrSquare = project.getAttribute('data-square')
-            let projectAttrHeight = project.getAttribute('data-height')
+                // let projectAttrSquare = project.getAttribute('data-square')
+                // let projectAttrHeight = project.getAttribute('data-height')
             let projectAttrType = project.getAttribute('data-type')
-            let projectSizes = project.getAttribute('data-sizes')
+                // let projectSizes = project.getAttribute('data-sizes')
+            let projectAttrKarkas = project.getAttribute('data-karkas')
+            let projectAttrPlita = project.getAttribute('data-plita')
+            let projectAttrNapolnenie = project.getAttribute('data-napolnenie')
                 // console.log(projectImg)
                 // console.log(projectTitle)
                 // console.log(projectText)
@@ -66,10 +69,13 @@ document.addEventListener('DOMContentLoaded', () => {
             popupProject.querySelector('.popup__title').textContent = projectTitle
             popupProject.querySelector('.popup__txt').textContent = projectText
             popupProject.querySelector('.value-1').textContent = projectAttrTotalArea
-            popupProject.querySelector('.value-2').textContent = projectAttrSquare
-            popupProject.querySelector('.value-3').textContent = projectAttrHeight
+                // popupProject.querySelector('.value-2').textContent = projectAttrSquare
+                // popupProject.querySelector('.value-3').textContent = projectAttrHeight
             popupProject.querySelector('.value-4').textContent = projectAttrType
-            popupProject.querySelector('.value-5').textContent = projectSizes
+                // popupProject.querySelector('.value-5').textContent = projectSizes
+            popupProject.querySelector('.value-6').textContent = projectAttrKarkas
+            popupProject.querySelector('.value-7').textContent = projectAttrPlita
+            popupProject.querySelector('.value-8').textContent = projectAttrNapolnenie
             document.querySelector('body').style.overflow = 'hidden';
         }
     }
